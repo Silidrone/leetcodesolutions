@@ -1,0 +1,20 @@
+Solution URL: https://leetcode.com/problems/zigzag-conversion/solutions/4946372/original-solution-time-o-n-space-o-n-beats-80-95/
+
+Title: ORIGINAL SOLUTION: time O(n), space O(n), beats 80.95%
+
+Intuition
+If you draw the zigzag diagram of the input you will notice that the offsets between horizontal nodes are symmetric from top to bottom.
+
+Approach
+Below, I use the following representations:
+
+k: number of letters in the input string s
+z: number of zigzags, calculated as z = k % (2n - 2)
+It starts off as (2numRows - 2) where n is the number of rows, and then it decreases by 2 as you go down, but this is only for the first zigzag. Once you move horizontally to the second zigzag, the second rows offset will be that of the (n - 1)th row's offset in the previous zigzag. This is because the diagonal line slices the two parts to two equal triangles, they are flipped versions of one another.
+
+Complexity
+Time complexity:
+The complexity is O(numRows)
+Even though it seems like there are two nested loops, the second loop goes until (z + 1) if it is for the first, last and the middle row, which is the best case scenario. If it is for the worst case scenario, then the loop goes until (z * 2 - 1), which simplifies to a linear function asymptotically.
+Space complexity:
+The space complexity is also O(numRows), as our offsets vector size is always equal to the number of rows

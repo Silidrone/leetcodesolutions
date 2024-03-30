@@ -1,0 +1,15 @@
+Solution URL: https://leetcode.com/problems/powx-n/solutions/4946470/using-binary-exponentiation-o-logn-beats-100/
+
+Title: Using binary exponentiation, O(logn), beats 100%
+
+Approach
+The idea is very simple, for example, if you want to do pow(3, 5) that is 3 ^ 5 which is also 3 ^ 1 * 3 ^ 4. Now you write down the exponent as a binary number, you get 5 decimal = 0101 binary
+
+Now all you have to do is iterate through the digits of the binary number from least-significant to most-significant (left to right) and now since we are looking for something like 3 ^ 1 * 3 ^ 4 that really means to only multiply at each instance where the binary number is equal to 1 (or n % 2 != 0), and raise 3 to the exponent of whichever exponent that binary number is raised (this is done by simply multiplying x by itself, every time we move from left to right).
+
+Complexity
+Time complexity:
+Very obviously O(logn) as that is the number of digits of the binary counterpart of a decimal number, which is what we iterate through
+
+Space complexity:
+O(1), only a single variable called retval is always needed, doesn't grow with input so O(1)

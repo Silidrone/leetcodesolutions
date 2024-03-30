@@ -1,0 +1,13 @@
+Solution URL: https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/solutions/3435299/using-my-own-min-heap-and-std-unordered-map-o-nlogn-time-beats-80-a-simple-solution/
+
+Title: Using my own min heap and std::unordered_map, O(nlogn) time, beats 80%, a simple solution
+
+Intuition
+In order to reach to least number of unique integers, we need to start removing the integers which have least occurrences, so that we end up removing more unique integers, resulting in least number of unique integers left.
+
+Approach
+We can easily find the number of occurrences for each element using an unordered map in an efficient way. After we've done that, we only need to start removing the elements with least occurrences (so that we remove as many, thus we get least number of unique integers left). In order to get the minimum sequentually we can add the occurrences to a heap, this will allow us to add the occurrences in O(nlogn) time (as we need to loop through the unorder map which is O(n) and adding to heap is O(nlogn)) and then extract the minimum at each step at O(1) time efficiently.
+
+Complexity
+Time complexity: O(nlogn)
+Space complexity: O(n)
