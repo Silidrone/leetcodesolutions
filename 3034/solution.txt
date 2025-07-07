@@ -1,0 +1,11 @@
+# Intuition  
+We want to count how many subarrays match a specific pattern of increases, equals, or decreases. Since each pattern entry compares two consecutive numbers, the subarray length must be pattern length + 1.
+
+# Approach  
+We slide a window of size pattern.size() + 1 across the array. For each window, we compare each pair of adjacent elements and check if they match the corresponding pattern value (1 for increasing, 0 for equal, -1 for decreasing). If the full window satisfies the pattern, increment the result.
+
+# Complexity  
+Time complexity: $$O(n \cdot m)$$  
+Space complexity: $$O(1)$$  
+
+Where n = nums.size() and m = pattern.size()

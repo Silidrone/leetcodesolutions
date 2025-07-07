@@ -1,0 +1,9 @@
+Intuition  
+To find the maximum water container, we need two lines that enclose the most area. Since the area is determined by the shorter height and the distance between lines, a two-pointer approach helps explore the optimal combination efficiently.
+
+Approach  
+Use two pointers at the ends of the array. Calculate the area formed by the two heights. Move the pointer pointing to the shorter line inward to potentially find a taller line and increase area. Continue until the pointers meet.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

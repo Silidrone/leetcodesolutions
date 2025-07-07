@@ -1,0 +1,10 @@
+Intuition  
+We need to find the smallest substring in `s` that contains all characters from `t`. A sliding window combined with two hash maps lets us track character requirements and efficiently adjust the window to find the minimum valid one.
+
+Approach  
+Use two hash maps: one for the required counts (`needed`) and one for the current counts (`done`). Expand the window by moving the right pointer. When all required characters are satisfied, try to shrink the window from the left while keeping it valid. Update the minimum window whenever a smaller valid window is found.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(k)$$  
+Where \( n \) is the length of `s` and \( k \) is the number of unique characters in `t`.

@@ -1,0 +1,9 @@
+Intuition  
+A number is happy if repeatedly replacing it with the sum of the squares of its digits eventually leads to 1. If we fall into a cycle that doesn’t include 1, the number is not happy.
+
+Approach  
+Use a set to store previously seen numbers to detect cycles. For each number, compute the sum of the squares of its digits. If the result is 1, return true. If we encounter a number we've seen before, return false (cycle detected).
+
+Complexity  
+Time complexity: $$O(\log n)$$ per iteration, total iterations are bounded due to the cycle  
+Space complexity: $$O(\log n)$$ due to storing intermediate results in a set  

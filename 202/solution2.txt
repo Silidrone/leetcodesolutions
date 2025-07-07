@@ -1,0 +1,9 @@
+Intuition  
+This is a cycle detection problem. Instead of using a set, we can apply Floyd’s Tortoise and Hare algorithm to detect cycles in the sequence of transformations.
+
+Approach  
+Define a helper `next` function to compute the sum of squares of digits. Use two pointers: `slow` moves one step at a time, and `fast` moves two steps. If `fast` reaches 1, the number is happy. If `fast` equals `slow`, a cycle exists and the number is not happy.
+
+Complexity  
+Time complexity: $$O(\log n)$$ per step, with bounded steps due to known cycle behavior  
+Space complexity: $$O(1)$$  

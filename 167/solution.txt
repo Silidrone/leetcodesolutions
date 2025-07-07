@@ -1,0 +1,9 @@
+Intuition  
+Since the input array is sorted, we can use the two-pointer technique to efficiently find the two numbers that sum to the target.
+
+Approach  
+Initialize two pointers, one at the start and one at the end of the array. Calculate the sum of their values. If it's less than the target, move the left pointer right. If it's greater, move the right pointer left. Repeat until the sum equals the target.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

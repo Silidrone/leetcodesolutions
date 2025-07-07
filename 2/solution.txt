@@ -1,0 +1,22 @@
+Intuition
+We need to simulate digit-by-digit addition of two numbers represented by linked lists, similar to how we perform columnar addition manually. Each node holds one digit in reverse order, so we start from the head and proceed forward while carrying over if a sum exceeds 9.
+
+Approach
+We iterate over both linked lists simultaneously. At each step, we:
+
+Extract the current digits from both lists (or treat them as 0 if the list has ended).
+
+Add them together with any carry from the previous step.
+
+Store the last digit of the sum in the current node of the result list.
+
+Update the carry for the next iteration.
+
+Finally, if there's a remaining carry after the loop, we append a new node with that value.
+
+This approach ensures we handle inputs of different lengths and include final carry if needed.
+
+Complexity
+Time Complexity: O(max(n,m)), we traverse both linked lists once, so it's proportional to the longer one.
+
+Space Complexity: O(max(n,m)), we build a new list with up to one node per digit, plus possibly one extra for a final carry.

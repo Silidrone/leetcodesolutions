@@ -1,0 +1,9 @@
+Intuition  
+To detect a cycle in a linked list, we can use Floyd's Tortoise and Hare algorithm: a slow pointer moves one step at a time, and a fast pointer moves two steps. If there is a cycle, the two pointers will eventually meet.
+
+Approach  
+Initialize `slow_it` at the head and `fast_it` one step ahead. In each loop iteration, move `slow_it` by one and `fast_it` by two. If they meet, a cycle exists. If `fast_it` or its next becomes `nullptr`, the list has no cycle.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

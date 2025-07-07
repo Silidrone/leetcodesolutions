@@ -1,0 +1,9 @@
+Intuition  
+We want to reverse the digits of an integer. The main challenge is avoiding overflow when building the reversed number.
+
+Approach  
+Use a loop to extract the last digit using modulus and add it to the result after shifting previous digits left by one decimal place. Before each multiplication, check if the result will overflow by comparing against INT_MAX / 10 and INT_MIN / 10.
+
+Complexity  
+Time complexity: $$O(\log_{10} x)$$  
+Space complexity: $$O(1)$$  

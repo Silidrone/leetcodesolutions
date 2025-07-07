@@ -1,0 +1,6 @@
+Intuition
+Since insertion to stack is reversed, if we just linearly take one by one the digits of a number (in a reversed order) and add them to both an array and a stack, we would end up having the left-to-right order of the number inside the stack and the right-to-left order of the number inside the array. We then iterate through both and check if the numbers mismatch, if they do, it isn't a palindrome, otherwise it is.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$  

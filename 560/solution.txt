@@ -1,0 +1,9 @@
+Intuition  
+We want to count how many subarrays sum to a target `k`. Instead of checking all subarrays, we use prefix sums and a hash map to track how many times each prefix sum has occurred.
+
+Approach  
+As we iterate, we keep a running prefix sum. If there exists a previous prefix sum such that `prefix_sum - k` has been seen, then a subarray ending at the current index sums to `k`. We store prefix sums in a hash map and increment counts as we go.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$  

@@ -1,0 +1,9 @@
+Intuition  
+Two strings are isomorphic if characters in one string can be replaced to get the other, with a one-to-one and consistent mapping. We need to make sure both directions of mapping are valid.
+
+Approach  
+Use two hash maps: one to track mapping from s to t and another from t to s. For each character pair, check if the existing mapping (if any) is consistent. If any mismatch is found, return false. If we finish checking all characters without conflict, return true.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

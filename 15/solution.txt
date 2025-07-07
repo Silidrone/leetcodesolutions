@@ -1,0 +1,9 @@
+Intuition  
+We want to find all unique triplets that sum to zero. Sorting the array helps us efficiently avoid duplicates and apply a two-pointer approach for each fixed element.
+
+Approach  
+Sort the input array. For each element, fix it as the first number in the triplet and use two pointers to find the remaining two numbers that sum to the negative of the fixed number. Skip duplicates for both the fixed number and the moving pointers to ensure uniqueness.
+
+Complexity  
+Time complexity: $$O(n^2)$$  
+Space complexity: $$O(1)$$ (excluding the output)

@@ -1,0 +1,9 @@
+# Intuition  
+Water can be trapped between bars depending on the shorter of the tallest bars to the left and right. A two-pointer approach helps track this efficiently.
+
+# Approach  
+Use two pointers starting from both ends. Track the max height seen so far from left (`lm`) and right (`rm`). At each step, move the pointer from the side with the lower max and accumulate water if the current height is less than the max. Update the max if needed.
+
+# Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

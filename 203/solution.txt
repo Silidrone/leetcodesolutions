@@ -1,0 +1,9 @@
+Intuition
+We need to remove all nodes with a given value from a singly-linked list. To handle edge cases cleanly (like removing the head), we can use a dummy node pointing to the head.
+
+Approach
+Create a dummy node that points to the head of the list. Iterate through the list using a pointer. If the next node’s value matches the target, we skip and delete it. Otherwise, move forward. Finally, return the next of the dummy node.
+
+Complexity
+Time complexity: $$O(n)$$
+Space complexity: $$O(1)$$

@@ -1,7 +1,3 @@
-Solution URL: https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/solutions/3435299/using-my-own-min-heap-and-std-unordered-map-o-nlogn-time-beats-80-a-simple-solution/
-
-Title: Using my own min heap and std::unordered_map, O(nlogn) time, beats 80%, a simple solution
-
 Intuition
 In order to reach to least number of unique integers, we need to start removing the integers which have least occurrences, so that we end up removing more unique integers, resulting in least number of unique integers left.
 

@@ -1,0 +1,9 @@
+Intuition  
+We want the longest subarray with equal number of 0s and 1s. By treating 0 as -1, the problem reduces to finding the longest subarray with a sum of 0.
+
+Approach  
+Convert 0s to -1s and compute a running prefix sum. Use a hash map to record the first index where each prefix sum occurs. If the same sum appears again, it means the subarray between those indices has a net sum of 0, i.e., equal 0s and 1s. Track the maximum such length.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$  

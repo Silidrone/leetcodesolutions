@@ -1,0 +1,9 @@
+Intuition  
+We are given two sorted arrays, and the first one has enough space at the end to hold both. To avoid overwriting useful data in nums1, we merge from the back.
+
+Approach  
+Start from the end of both arrays and compare elements. Place the larger one at the end of nums1 (from index m+n-1 down to 0). Once either array is exhausted, copy any remaining elements from nums2 (since remaining nums1 elements are already in place).
+
+Complexity  
+Time complexity: $$O(m + n)$$  
+Space complexity: $$O(1)$$  

@@ -1,0 +1,9 @@
+# Intuition  
+To calculate how much water can be trapped, we look for "valleys": positions where there are taller bars on both sides. Water can accumulate in these valleys based on the height of the shorter wall.
+
+# Approach  
+Iterate through the array and for each bar, try to find the next bar to the right that is equal or taller. If found, accumulate water in the gaps between, adjusting previous gap values to ensure we don’t overcount trapped water. This simulates filling water between two walls.
+
+# Complexity  
+Time complexity: $$O(n^2)$$ in the worst case due to nested loops and repeated vector operations  
+Space complexity: $$O(n)$$ due to the temporary `gaps` vector used for each valley segment

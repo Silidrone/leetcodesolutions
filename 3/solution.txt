@@ -1,0 +1,9 @@
+Intuition  
+We want the length of the longest substring without repeating characters. A sliding window helps us track the current valid substring, expanding right until a repeat is found, and then shrinking from the left.
+
+Approach  
+Use two pointers (`l` and `r`) and a set to store characters in the current window. Move the right pointer to expand the window. If a character repeats, remove from the left until it's unique again. Update the maximum length found during the process.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(k)$$ where k is the charset size (e.g., 26 for lowercase letters, 128 for ASCII)

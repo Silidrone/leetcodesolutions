@@ -1,7 +1,3 @@
-Solution URL: https://leetcode.com/problems/zigzag-conversion/solutions/4946372/original-solution-time-o-n-space-o-n-beats-80-95/
-
-Title: ORIGINAL SOLUTION: time O(n), space O(n), beats 80.95%
-
 Intuition
 If you draw the zigzag diagram of the input you will notice that the offsets between horizontal nodes are symmetric from top to bottom.
 

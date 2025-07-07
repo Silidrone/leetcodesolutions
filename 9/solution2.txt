@@ -1,0 +1,9 @@
+Intuition  
+To check if an integer is a palindrome, we can reverse its digits and compare it with the original. Negative numbers are automatically not palindromes due to the minus sign.
+
+Approach  
+If the number is negative, return false. Otherwise, reverse the number by extracting digits and rebuilding it. Then compare the reversed number to the original input.
+
+Complexity  
+Time complexity: $$O(\log_{10} x)$$  
+Space complexity: $$O(1)$$  

@@ -1,0 +1,10 @@
+Intuition  
+To efficiently compute the sum of any subarray multiple times, we can preprocess the input using prefix sums. This allows us to answer each query in constant time.
+
+Approach  
+In the constructor, build a prefix sum array where each entry at index i stores the sum of elements from 0 to i. To answer a query for the sum from index left to right, subtract the prefix sum at left-1 from the prefix sum at right.
+
+Complexity  
+Time complexity (constructor): $$O(n)$$  
+Time complexity (sumRange): $$O(1)$$  
+Space complexity: $$O(n)$$  

@@ -1,0 +1,9 @@
+Intuition  
+To count all primes less than n efficiently, we can use the Sieve of Eratosthenes, a classic algorithm that eliminates non-prime numbers by marking their multiples.
+
+Approach  
+We initialize a boolean array marking all numbers as potential primes. Starting from 2, for each number that is still marked as prime, we mark all its multiples as non-prime. Finally, we count how many are still marked as true.
+
+Complexity  
+Time complexity: $$O(n \log \log n)$$  
+Space complexity: $$O(n)$$

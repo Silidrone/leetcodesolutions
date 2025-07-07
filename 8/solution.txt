@@ -1,0 +1,9 @@
+Intuition  
+This problem is about parsing a string into a valid 32-bit signed integer, simulating the behavior of the `atoi` function. We need to handle whitespace, optional sign, leading zeros, digits, and overflow.
+
+Approach  
+Skip leading whitespace, handle the optional '+' or '-' sign, and skip leading zeros. Then, iterate through digit characters and build the number while checking for overflow on each step. Use bounds based on INT_MAX and INT_MIN to safely detect overflows.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

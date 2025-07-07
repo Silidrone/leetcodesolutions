@@ -1,0 +1,9 @@
+Intuition
+We need to find two indices such that their corresponding values add up to the target. The brute-force way would be to check all pairs, but that’s too slow. Instead, we can use a hash map to store numbers we’ve already seen and check if the complement (target - current) exists.
+
+Approach
+Iterate through the array. For each number, calculate its complement with respect to the target. If that complement exists in the hash map, return its index along with the current index. Otherwise, store the current number and its index in the hash map for future lookups.
+
+Complexity
+Time complexity: $$O(n)$$
+Space complexity: $$O(n)$$

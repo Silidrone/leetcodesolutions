@@ -1,0 +1,9 @@
+Intuition  
+We need to find the smallest subarray whose sum is at least the target. A sliding window is ideal here since all elements are positive — once the sum exceeds the target, shrinking the window from the left is guaranteed to reduce the sum.
+
+Approach  
+Use two pointers (`l` and `r`) to define a window. Expand the window by moving `r` and adding to the sum. Once the sum is greater than or equal to the target, move `l` to try shrinking the window while still satisfying the condition. Track the minimum size found.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

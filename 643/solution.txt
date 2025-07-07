@@ -1,0 +1,9 @@
+Intuition  
+We need to find the maximum average of any contiguous subarray of size k. Since recalculating the sum from scratch each time is inefficient, we use a sliding window to update the average incrementally.
+
+Approach  
+First, compute the average of the first k elements. Then, slide the window forward by subtracting the element that falls out and adding the new one, adjusting the average accordingly. Keep track of the maximum average seen.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  
