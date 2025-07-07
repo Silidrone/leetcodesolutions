@@ -1,0 +1,12 @@
+# Intuition
+This is a simulation problem. For each cell, we count how many of its 8 neighbors are live, then apply the given rules to determine the cell’s next state. To avoid modifying cells before they’re used for neighbor calculations, we work with a copy of the board.
+
+# Approach
+- Create a copy of the board to read from, while writing changes to the original board.
+- For each cell, check the 8 neighboring cells.
+- Count live neighbors.
+- Apply the Game of Life rules to determine the cell’s next state.
+
+# Complexity
+- Time complexity: $$O(m \cdot n)$$  
+- Space complexity: $$O(m \cdot n)$$, due to using a full copy of the board.

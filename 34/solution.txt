@@ -1,0 +1,10 @@
+Intuition
+First binary search keeps doing l = m + 1 in case of equality, which ends up shrinking toward the end of the array.
+
+I also keep a flag here, if the target hasn't been found at all in the first binary search, we return [-1, -1] immediately.
+
+Second binary search keeps doing r = m in case of equality, which ends up shrinking toward the beginning of the array.
+
+Complexity
+Time complexity: O(logn)
+Space complexity: O(1)

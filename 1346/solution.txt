@@ -1,0 +1,13 @@
+# Intuition
+We want to find if there exists an element such that one is double the other.  
+Instead of checking every pair (which is $$O(n^2)$$), we can track elements we’ve seen and check for each if its double or half already appeared.
+
+# Approach
+- Traverse the array once.
+- For each element `e`, check if it exists in the `seen` set (meaning we previously inserted `2 * e` or `e / 2`).
+- Insert `e * 2` and, if `e` is even, insert `e / 2` into the set.
+- If a match is found during traversal, return true.
+
+# Complexity
+- Time complexity: $$O(n)$$  
+- Space complexity: $$O(n)$$

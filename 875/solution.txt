@@ -1,0 +1,11 @@
+Intuition
+Given any k, determining how fast (in terms of hours) Koko can eat all the piles is O(n) time. We just loop through the piles and if pile == k, then we count 1, otherwise we count ceil(pile_bananas/k). Then, all we need to do is apply binary search to find the minimum k to finish all piles within h hours. We already have the function to evaluate how much hours k yields.
+
+Complexity
+Given:
+
+n: number of piles
+b: maximum bananas in any pile
+The time complexity is: O(nlogb)
+
+Space complexity: O(1)

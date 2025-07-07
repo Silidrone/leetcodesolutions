@@ -1,0 +1,8 @@
+Intuition
+The problem involves finding the maximum distance between two indices i and j (with i <= j) such that nums1[i] <= nums2[j]. Since nums1 and nums2 are both non-increasing arrays, we can take advantage of their structure to avoid a brute-force O(n^2) solution.
+
+The key insight is that for each element in nums1, we can binary search in nums2 (starting from the same index i) to find the furthest index j such that the inequality still holds. This gives us the largest possible j - i for each i efficiently.
+
+Complexity
+Time complexity: O(nlogn)
+Space complexity: O(1)

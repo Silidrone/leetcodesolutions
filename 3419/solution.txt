@@ -1,0 +1,14 @@
+# Intuition
+We need the smallest possible max edge weight such that all nodes can reach the target node `n-1`.  
+By reversing the edges and doing DFS from node `n-1`, we can check for any given max weight whether it's possible for all nodes to reach it.  
+We binary search on the max edge weight to minimize it.
+
+# Approach
+- Build a reversed graph (edges point to source instead of destination).
+- Binary search the maximum allowed weight from 1 to 1e6.
+- For each weight guess, use DFS from node `n-1` and count how many nodes can reach it via edges with weight ≤ guess.
+- If all `n` nodes can reach it, move left in the search space; otherwise, move right.
+
+# Complexity
+- Time complexity: $$O(n \cdot \log W)$$, where $$n$$ is the number of nodes and $$W$$ is the range of possible weights.
+- Space complexity: $$O(n + e)$$ for the adjacency list and visited tracking.

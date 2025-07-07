@@ -1,0 +1,15 @@
+# Intuition
+We are stacking rows of coins such that each row contains one more coin than the previous. The total coins needed for `k` complete rows is:  
+$$\text{coins} = \frac{k(k+1)}{2}$$  
+We want the **largest** `k` such that this sum is **less than or equal to** `n`.
+
+# Approach
+- Perform a binary search for `k` in range $$[1, n]$$.
+- For each `mid`, compute how many coins are needed.
+- If it's equal to `n`, return `mid`.
+- If less, move `start` up; else move `end` down.
+- Return the `end` because `start` might overshoot.
+
+# Complexity
+- Time complexity: $$O(\log n)$$
+- Space complexity: $$O(1)$$

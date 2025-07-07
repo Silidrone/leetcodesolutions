@@ -1,0 +1,13 @@
+# Intuition
+We want to make `target` a subsequence of `arr` with the minimum number of insertions. This reduces to finding the **Longest Common Subsequence**, but because `target` has distinct elements, we can map its elements to their indices and find the **Longest Increasing Subsequence** (LIS) in that mapped sequence.
+
+# Approach
+- Map each value in `target` to its index.
+- Iterate over `arr`, and for each element also in `target`, convert it to its corresponding index in `target`.
+- Build the LIS of these indices using binary search.
+- The number of operations required is the size difference between `target` and the LIS.
+
+# Complexity
+- Time complexity: $$O(n \log n)$$  
+- Space complexity: $$O(n)$$  
+Where *n* is the size of `arr`.

@@ -1,0 +1,6 @@
+Intuition
+Basically, we binary search a window of k length. m points to the first element in the window, and m + k points to the first element outside the window, r points to the end of the search sequence, don't confuse the two! If arr[m] is more distant to x than the first element outside the window (on the right side), then it is logical to discard all elements prior to the start of the window, including the start of the window, since we know that just by shifting by one, the window is better.
+
+Complexity
+Time complexity: O(logn+k)
+Space complexity: O(k)

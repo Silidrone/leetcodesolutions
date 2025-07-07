@@ -1,0 +1,23 @@
+Intuition
+To count reverse pairs (i, j) where i < j and nums[i] > 2 * nums[j], we can observe that checking all pairs directly would be too slow: O(n^2). 
+Instead, since the condition resembles an inversion, we can use a modified merge sort to both sort and count these pairs efficiently while preserving the relative positions of elements.
+
+Approach
+We use a divide-and-conquer strategy via merge sort:
+
+Recursively divide the array into two halves until we reach single elements.
+
+While merging two sorted halves, count how many elements in the right half are less than nums[i] / 2, which corresponds to the condition nums[i] > 2 * nums[j].
+
+Use two pointers during merge to count these cross-pairs efficiently in linear time.
+
+Merge the two halves while maintaining sorted order for use in higher recursive calls.
+
+This ensures we only count valid (i, j) pairs once and in the correct order (i < j).
+
+Complexity
+Time complexity: O(nlogn)
+Each merge operation processes a total of n elements across log n levels of recursion. Counting reverse pairs in each merge step is done in linear time using two pointers.
+
+Space complexity: O(n)
+Due to temporary vectors created during merging, the extra space used is linear in the size of the input.

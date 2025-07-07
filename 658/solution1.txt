@@ -1,0 +1,7 @@
+Intuition
+We first find where x would belong inside arr using a binary search. Then, we initiate two "pointers" (indices) to go opposite directions from that point. We take the one that is closer and advance it further (taking the one with smaller magnitude in case of a tie).
+
+Complexity
+Time complexity: O(logn+k) where n is the input array size.
+
+Space complexity: O(k)
