@@ -1,0 +1,12 @@
+# Intuition
+We are given a sorted sequence of versions from 1 to `n`, where all versions after a certain point are bad. Our task is to find the **first** bad version using the fewest number of API calls.
+
+# Approach
+- Use **binary search** to reduce the number of `isBadVersion` checks.
+- If version `mid` is bad and version `mid - 1` is **not** bad, then `mid` is the answer.
+- If both `mid` and `mid - 1` are bad, recurse on the left half.
+- If `mid` is good, the first bad version must be after `mid`, so recurse on the right.
+
+# Complexity
+- Time complexity: $$O(\log n)$$, binary search halves the space each time.
+- Space complexity: $$O(\log n)$$, due to recursion stack.

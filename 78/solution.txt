@@ -1,0 +1,9 @@
+Intuition  
+To generate all subsets of a list, we can use recursion. At each index, we either include the current number or skip it. This leads to all possible combinations of elements.
+
+Approach  
+Start from the first index. For each recursive call, build combinations that include the current element. Then combine it with all previously generated subsets. Push the single-element subset now, and empty set at the end.
+
+Complexity  
+Time complexity: $$O(2^n \cdot n)$$, there are \( 2^n \) subsets, and each takes up to \( O(n) \) to copy  
+Space complexity: $$O(2^n \cdot n)$$ for storing all subsets  

@@ -1,0 +1,11 @@
+# Intuition
+We are asked to rotate the string `s` by `k` positions to the left (or right depending on interpretation) and return the new string.  
+The encryption replaces each character at position `i` with the character at `(i + k) % n`.
+
+# Approach
+We simulate the encryption process by iterating through all indices and writing each character from the source string into its target position in a result string.  
+This gives a rotated string based on the offset `k`.
+
+# Complexity
+- Time complexity: $$O(n)$$  
+- Space complexity: $$O(n)$$

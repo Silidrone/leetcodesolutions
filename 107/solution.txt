@@ -1,0 +1,9 @@
+Intuition  
+To get a bottom-up level order traversal, we can perform a regular BFS (top-down), then simply reverse the result at the end.
+
+Approach  
+Use a queue with BFS to gather nodes level by level. Store each level’s values in a vector. After traversal, reverse the result vector so the bottom-most level comes first.
+
+Complexity  
+Time complexity: $$O(n)$$, all nodes are visited once  
+Space complexity: $$O(n)$$, for the queue and result vector  

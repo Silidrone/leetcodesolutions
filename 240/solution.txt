@@ -1,0 +1,10 @@
+Intuition  
+Given that each row is sorted left-to-right and each column is sorted top-to-bottom, we can start from the top-right corner and eliminate one row or column at each step.
+
+Approach  
+Start at the top-right element. If the current value is greater than the target, move left (decrease column). If it's smaller, move down (increase row). Repeat until we find the target or go out of bounds.
+
+Complexity  
+Time complexity: $$O(m + n)$$  
+Space complexity: $$O(1)$$  
+Where \( m \) is the number of rows and \( n \) is the number of columns.

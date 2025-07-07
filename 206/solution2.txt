@@ -1,0 +1,9 @@
+Intuition  
+To reverse a linked list, we can use a stack to store all the nodes as we traverse the list. Since stacks are LIFO, popping nodes and relinking them gives us the reversed list.
+
+Approach  
+Traverse the list and push each node onto a stack. Then pop nodes one by one and link them in reverse order. Finally, set the original head's `next` pointer to null to terminate the new list.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$ due to the stack  

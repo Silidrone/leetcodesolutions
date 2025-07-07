@@ -1,0 +1,9 @@
+Intuition  
+To find the k-th largest element, we can maintain a min-heap of size k. The smallest element in this heap will always be the k-th largest among the elements seen so far.
+
+Approach  
+Insert the first k elements into a min-heap. Then for each remaining element, if it's larger than the heap's top, replace the top with it. After processing all elements, the top of the heap is the k-th largest.
+
+Complexity  
+Time complexity: $$O(n \log k)$$  
+Space complexity: $$O(k)$$  

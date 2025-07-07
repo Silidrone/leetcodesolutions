@@ -1,0 +1,10 @@
+Intuition  
+We need to place N queens on an N x N board so that no two queens attack each other. This means no two queens can be in the same row, column, or diagonal. We use backtracking to try placing a queen in each row.
+
+Approach  
+Use 3 arrays to track which columns and diagonals are under attack. For each row, try placing a queen in a column that’s not attacked. Mark the attack vectors, recurse, then backtrack.
+
+Complexity  
+Time complexity: $$O(n!)$$  
+Each row tries n positions, next row n - 1, and so on.  
+Space complexity: $$O(n^2)$$ for storing the board and solutions.

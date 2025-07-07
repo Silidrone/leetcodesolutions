@@ -1,0 +1,9 @@
+Intuition  
+We need to reverse a portion of a linked list from position `left` to `right`. To do this efficiently in one pass, we isolate the sublist and reverse it in-place while reconnecting the boundaries properly.
+
+Approach  
+Use a dummy node to simplify edge cases. Traverse to the node just before the reversal starts (`pre_entrance`). Reverse the sublist using standard iterative reversal logic. Reconnect the reversed part back into the original list by adjusting the pointers at the boundaries.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

@@ -1,0 +1,9 @@
+Intuition  
+The array is a rotated sorted array. To search efficiently, we first need to find the pivot (where the rotation happened) and then do binary search on the correct sorted half.
+
+Approach  
+Use modified binary search to find the pivot: the point where an element is greater than the next one, or smaller than the previous one. Then, depending on the pivot, do a standard binary search in the appropriate subarray (either left or right of the pivot).
+
+Complexity  
+Time complexity: $$O(\log n)$$  
+Space complexity: $$O(\log n)$$ due to recursion (can be $$O(1)$$ if rewritten iteratively)  

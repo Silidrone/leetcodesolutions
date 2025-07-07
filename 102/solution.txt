@@ -1,0 +1,9 @@
+Intuition  
+To return the level-order traversal of a binary tree, we need to visit nodes level by level from top to bottom, left to right — this is naturally done using BFS.
+
+Approach  
+Use a queue to perform BFS. Track the current level alongside each node in the queue. For each node, if its level hasn't been added to the result vector yet, add a new subvector. Then enqueue its children with level + 1.
+
+Complexity  
+Time complexity: $$O(n)$$, we visit each node once  
+Space complexity: $$O(n)$$, for the queue and the result storage  

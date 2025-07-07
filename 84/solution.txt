@@ -1,0 +1,9 @@
+Intuition  
+To find the largest rectangle in a histogram, we use a monotonic stack to track indices of increasing bar heights. When we find a lower bar, we calculate areas using the popped heights as the smallest bar in a rectangle.
+
+Approach  
+Iterate through each bar. While the current height is less than the stack’s top, pop and calculate area using the popped height and the width from its index to the current index. Track the leftmost index for width extension when pushing new bars. After the loop, process remaining bars in the stack.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$  

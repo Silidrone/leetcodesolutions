@@ -1,0 +1,15 @@
+# Intuition
+Each cell has a "street type" (1 to 6), and each type allows movement in specific directions. We want to check if there is a valid path from the top-left to the bottom-right such that each move follows the allowed street connections and matches up properly with neighboring cells.
+
+# Approach
+- Represent each street type as a 4-bit direction mask: left, up, right, down.
+- Define which directions each street allows.
+- Use DFS to traverse the grid:
+  - From each cell, attempt moving in allowed directions.
+  - Only proceed if the neighboring cell allows entrance from the opposite direction.
+  - Track visited cells to avoid cycles.
+- Stop and return true when the bottom-right is reached.
+
+# Complexity
+- Time complexity: $$O(m \cdot n)$$, where `m` and `n` are grid dimensions, since we visit each cell at most once.
+- Space complexity: $$O(m \cdot n)$$, for the `visited` matrix and the recursion stack.

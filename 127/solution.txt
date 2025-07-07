@@ -1,0 +1,9 @@
+Intuition  
+We want the shortest transformation sequence from `begin_word` to `end_word` by changing one letter at a time, using only words from the word list. Since we’re looking for the shortest path, a BFS approach is ideal.
+
+Approach  
+Convert the word list to a set for fast lookup. Use BFS starting from `begin_word`. For each word, generate all possible one-letter variations and check if they’re valid transitions. Stop when `end_word` is reached. Use a visited set to avoid revisiting words and prevent cycles.
+
+Complexity  
+Time complexity: $$O(n \cdot k^2)$$ where \( n \) is the number of words in the list, and \( k \) is the length of each word  
+Space complexity: $$O(n \cdot k)$$ for the queue, visited set, and word set  

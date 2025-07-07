@@ -1,0 +1,11 @@
+Intuition
+Rotating an array k times basically means to do the following k times:
+
+- take the last element and put it in front of the list
+- remove the last element
+
+Now we can do this in O(n * k) time with an array in-place, but if we want to accomplish doing this in O(max(n, k)) time, we can use a linked list. Since in a doubly linked list, add/remove operations on either side of the linked list (head or tail) are O(1), we can copy over the whole array in the linked list, do the rotation operations in O(k) time and copy back the linked list. This will result in O(2n + k) time, asymptotically in O(max(n, k))
+
+Complexity
+Time complexity: O(max(n, k))
+Space complexity: O(n)

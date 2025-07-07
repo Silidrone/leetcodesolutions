@@ -1,0 +1,9 @@
+Intuition
+To clone an undirected graph, we must deep-copy each node and all of its neighbors. Since the graph may contain cycles, we need to track visited nodes to avoid infinite recursion and reuse already cloned nodes.
+
+Approach
+Use DFS to traverse the graph. Create a new node for each unvisited node, store it in a visited list using its value as an index, and recursively clone its neighbors. If a node has already been cloned (i.e., exists in `visited`), reuse it instead of creating a new one.
+
+Complexity
+Time complexity: $$O(n)$$ — each node is visited once  
+Space complexity: $$O(n)$$ — for the visited list and recursion stack  

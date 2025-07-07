@@ -1,0 +1,9 @@
+Intuition  
+We want to find the next greater element for each element in `nums1` based on their position in `nums2`. A monotonic stack can efficiently track the next greater elements as we iterate through `nums2`.
+
+Approach  
+Map each value in `nums1` to its index for fast result lookup. Traverse `nums2` using a stack to maintain a decreasing sequence. When a greater element is found, update the result for any stored elements that match `nums1`. Only push elements that exist in `nums1` to limit unnecessary work.
+
+Complexity  
+Time complexity: $$O(n + m)$$ where \( n = \text{nums1.size()} \) and \( m = \text{nums2.size()} \)  
+Space complexity: $$O(n + m)$$ for the map and stack  

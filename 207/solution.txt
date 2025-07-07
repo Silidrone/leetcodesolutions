@@ -1,0 +1,9 @@
+Intuition  
+To determine if all courses can be finished, we need to check for cycles in the directed course dependency graph. A cycle means some course depends on itself through a chain, making completion impossible.
+
+Approach  
+Build an adjacency list from prerequisites. Use DFS to detect cycles. Track the current path with a set (path), if we revisit a node already in the current path, a cycle exists. Mark nodes as visited after processing them to avoid redundant checks.
+
+Complexity  
+Time complexity: $$O(n + e)$$ where \( n \) is the number of courses, and \( e \) is the number of prerequisites  
+Space complexity: $$O(n + e)$$ for adjacency list, visited set, and path set  

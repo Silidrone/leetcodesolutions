@@ -1,0 +1,9 @@
+Intuition  
+We want to find out how many days it takes for a warmer temperature to occur. A monotonic decreasing stack helps us track indices of unresolved temperatures efficiently.
+
+Approach  
+Use a stack to store indices of temperatures in decreasing order. For each temperature, check if it's warmer than the top of the stack. If so, resolve all colder temperatures on the stack by updating their result with the difference in indices. Push the current index afterward.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$  

@@ -1,0 +1,14 @@
+Intuition
+The intuition is to try to find the closest heater for each house, and then among all those found distances, take the furthest one, which is the minimum radius we need to cover all houses.
+
+Approach
+Loop through houses, find closest distance for each house to each heater (use binary search). Take the maximum distance.
+
+Complexity
+Given that:
+h=heaters.size()
+H=houses.size()
+
+Time complexity: O(hlogh+nlogh)
+
+Space complexity: O(1)

@@ -1,0 +1,9 @@
+Intuition  
+To swap every two adjacent nodes in a linked list, we can iterate through the list in pairs and adjust pointers accordingly. Using a dummy node helps simplify pointer updates at the head.
+
+Approach  
+Use a dummy node pointing to the head to handle edge cases. Iterate through the list with two pointers, `prev` and `curr`, and swap each adjacent pair by adjusting `next` pointers. After each swap, move `prev` and `curr` forward by two nodes.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

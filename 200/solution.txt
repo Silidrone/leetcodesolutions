@@ -1,0 +1,9 @@
+Intuition  
+Each group of connected '1's (land) forms an island. We need to count how many such groups exist. This is a classic grid DFS problem, where we sink each visited island to avoid counting it again.
+
+Approach  
+Traverse the grid. When a land cell is found, perform DFS to mark the entire island as visited by converting its cells to water. Each DFS call represents discovering a new island, so we increment the count.
+
+Complexity  
+Time complexity: $$O(m \cdot n)$$ where \( m \) is the number of rows, and \( n \) is the number of columns  
+Space complexity: $$O(m \cdot n)$$ in the worst case due to the recursion stack  

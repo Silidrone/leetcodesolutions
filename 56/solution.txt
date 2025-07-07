@@ -1,0 +1,9 @@
+Intuition  
+To merge overlapping intervals, we first sort them. Then we iterate and try to combine each interval with the last one in the result if they overlap.
+
+Approach  
+Sort the intervals by start time. Then iterate through the sorted list. If the current interval overlaps with the last one in the result, merge them by extending the end. Otherwise, add it as a new interval.
+
+Complexity  
+Time complexity: $$O(n \log n)$$ due to sorting  
+Space complexity: $$O(n)$$ for the result vector  

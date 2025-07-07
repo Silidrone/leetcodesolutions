@@ -1,0 +1,9 @@
+Intuition  
+We want the maximum path sum in a binary tree, where a path can start and end at any node. At each node, we consider the best path that goes through it (left + node + right) and update the global max if it's higher.
+
+Approach  
+Use post-order traversal. For each node, recursively compute the max path sum from its left and right children (ignoring negative paths with max(0, ...)). Update the global maximum if the current node forms a higher-sum path. Return the max gain from one child + current node to allow parent to continue the path.
+
+Complexity  
+Time complexity: $$O(n)$$ — every node is visited once  
+Space complexity: $$O(h)$$ — recursion stack, where \( h \) is the tree height  

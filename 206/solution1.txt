@@ -1,0 +1,9 @@
+Intuition  
+To reverse a singly linked list, we want each node to point to its previous node instead of the next one. This can be done recursively by going all the way to the end and rewiring the links on the way back.
+
+Approach  
+Use a helper function that recursively reaches the tail of the list. As the call stack unwinds, set `next->next = current` to reverse the direction. Set `current->next = nullptr` to terminate the new tail. Track the original tail beforehand to return as the new head.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(n)$$ due to recursion stack  

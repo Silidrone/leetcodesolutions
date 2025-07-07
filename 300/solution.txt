@@ -1,0 +1,12 @@
+# Intuition
+We want to find the length of the **longest increasing subsequence** (LIS) in the array. The key insight is that we can **maintain a dynamic sequence** that represents the smallest possible tail for increasing subsequences of all lengths.
+
+# Approach
+- Use a greedy + binary search strategy.
+- Iterate through `nums` and use `lower_bound` to find the correct position of the current element in an array that stores the LIS up to that point.
+- Replace the element at the found index to maintain the smallest possible value.
+- The final length of that array is the LIS length.
+
+# Complexity
+- Time complexity: $$O(n \log n)$$, binary search for each element.
+- Space complexity: $$O(1)$$.

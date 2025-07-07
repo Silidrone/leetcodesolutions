@@ -1,0 +1,9 @@
+Intuition  
+Treat the array as a linked list where each index points to the next node. Due to the duplicate, this list has a cycle. Using Floyd’s Tortoise and Hare algorithm, we can detect and locate the entry point of the cycle, which corresponds to the duplicate number.
+
+Approach  
+Initialize two pointers (`slow` and `fast`) and find their meeting point using cycle detection. Then reset one pointer to the start and move both one step at a time until they meet again: this point is the duplicate number.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

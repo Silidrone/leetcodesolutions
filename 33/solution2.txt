@@ -1,0 +1,9 @@
+Intuition  
+In a rotated sorted array, one side (left or right of mid) is always sorted. We can use this property to apply binary search by narrowing down the search space based on where the target lies.
+
+Approach  
+Perform binary search. At each step, check if the left half is sorted or the right half. Then determine whether the target lies within the sorted half. If it does, search within that half; otherwise, search the other half.
+
+Complexity  
+Time complexity: $$O(\log n)$$  
+Space complexity: $$O(1)$$  

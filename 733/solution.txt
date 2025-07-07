@@ -1,0 +1,9 @@
+Intuition  
+Flood fill is a classic DFS problem. Starting from a given cell, we want to fill all connected cells with the same color as the start cell. Only 4-directionally adjacent cells with the same initial color are valid for traversal.
+
+Approach  
+Use DFS from the starting cell. At each step, check bounds and whether the current cell has the same color as the starting cell. If so, change its color and continue DFS in all four directions. Skip already-visited or differently-colored cells.
+
+Complexity  
+Time complexity: $$O(m \cdot n)$$ where \( m \) and \( n \) are the grid's dimensions  
+Space complexity: $$O(m \cdot n)$$ in the worst case due to the recursion stack  

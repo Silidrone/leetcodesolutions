@@ -1,0 +1,9 @@
+Intuition  
+We want to collect all root-to-leaf paths in a binary tree. This is a natural use case for a depth-first traversal (preorder), where we build the path string as we descend.
+
+Approach  
+Use recursion to traverse the tree. For each node, append its value to the current path. If it’s a leaf node, store the path. Otherwise, continue the traversal by passing the updated path to left and right children.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(h)$$ (due to recursion stack), where \( n \) is the number of nodes and \( h \) is the tree height  

@@ -1,0 +1,9 @@
+Intuition  
+To minimize the number of intervals to remove so that the rest are non-overlapping, we want to keep as many non-overlapping intervals as possible — a classic greedy interval scheduling problem.
+
+Approach  
+Sort the intervals by their end time. Then iterate through them, always keeping the interval that ends earliest (to allow more room for future intervals). Count any interval that overlaps with the previously selected one and mark it for removal.
+
+Complexity  
+Time complexity: $$O(n \log n)$$ due to sorting  
+Space complexity: $$O(1)$$  

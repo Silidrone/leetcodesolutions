@@ -1,0 +1,9 @@
+Intuition  
+We need to compute the minimum time required for all fresh oranges to rot. Since rot spreads level by level (minute by minute), this is a perfect use case for BFS starting from all initially rotten oranges.
+
+Approach  
+Traverse the grid and enqueue all initially rotten oranges with time 0. Count all fresh oranges. Perform BFS from the rotten ones, spreading rot to adjacent fresh oranges. Track how many fresh oranges got rotted. At the end, if the number of rotted fresh oranges equals the initial fresh count, return the time taken, otherwise return -1.
+
+Complexity  
+Time complexity: $$O(m \cdot n)$$ where \( m \) is the number of rows, and \( n \) is the number of columns  
+Space complexity: $$O(m \cdot n)$$ for the queue in the worst case  

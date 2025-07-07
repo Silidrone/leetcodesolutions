@@ -1,0 +1,9 @@
+Intuition  
+To rotate an array to the right by k steps, we can use the reverse approach to do it in-place without extra space. Reversing parts of the array repositions elements efficiently.
+
+Approach  
+First, reverse the entire array. Then, reverse the first k elements to restore their order, followed by reversing the rest. This simulates rotating the array to the right by k steps.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

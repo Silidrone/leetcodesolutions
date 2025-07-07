@@ -1,0 +1,13 @@
+Intuition
+The most important thing here to realize is, if you encounter a number (say the middle one in the array) based on it being positive or negative, you can make claims:
+
+i: index marking the beginning of the array
+j: index marking the end of the array
+mid: (i + j) / 2
+
+if it is a positive number, you can increment the positive count by (j - mid) + 1. Then, solve the problem for j = mid - 1.
+if it is a negative number, you can increment the negative count by (mid - i) + 1. Then, solve the problem for i = mid + 1.
+
+Complexity
+Time complexity: O(logn)
+Space complexity: O(1)

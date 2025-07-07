@@ -1,0 +1,9 @@
+Intuition  
+We need to return a valid order to take all courses given prerequisites. This is a classic topological sort problem. If the graph has a cycle, it's impossible to complete all courses.
+
+Approach  
+Build a directed graph from the prerequisites. Use DFS for topological sorting. Track the current DFS path to detect cycles. If a cycle is found, return an empty result. Otherwise, add nodes to the result list in post-order and reverse it at the end to get the correct order.
+
+Complexity  
+Time complexity: $$O(n + e)$$ where \( n \) is the number of courses, and \( e \) is the number of prerequisites  
+Space complexity: $$O(n + e)$$ for adjacency list, visited array, path set, and result  

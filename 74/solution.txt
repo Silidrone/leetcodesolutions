@@ -1,0 +1,10 @@
+Intuition  
+The matrix has the property that each row is sorted and the first element of each row is greater than the last element of the previous row. This means we can binary search the first column to find the potential row, then binary search within that row.
+
+Approach  
+First, binary search on the first column to locate the row where the target could lie. Then perform a second binary search on that row to search for the target. If found, return true; otherwise, return false.
+
+Complexity  
+Time complexity: $$O(\log m + \log n)$$  
+Space complexity: $$O(1)$$  
+Where \( m \) is the number of rows and \( n \) is the number of columns.

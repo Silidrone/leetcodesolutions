@@ -1,0 +1,9 @@
+Intuition  
+We want to capture all 'O' regions that are fully surrounded by 'X'. Any 'O' connected to the border is safe and should not be flipped. The goal is to identify regions of 'O's that are not connected to any edge.
+
+Approach  
+Skip edge cells. For each unvisited 'O' inside the grid, perform DFS to check if it's fully enclosed. Track all visited positions in a local list. If during DFS we hit the border, mark the region as unsafe. If the region is enclosed, flip all visited positions to 'X'.
+
+Complexity  
+Time complexity: $$O(m \cdot n)$$ where \( m \) is number of rows, and \( n \) is number of columns  
+Space complexity: $$O(m \cdot n)$$ for visited tracking and recursion stack  

@@ -1,0 +1,9 @@
+Intuition  
+To reverse a singly linked list iteratively, we can rewire the `next` pointers as we traverse the list, maintaining a reference to the previous node at each step.
+
+Approach  
+Start with `prev = nullptr` and iterate through the list. For each node, store the next node temporarily, point `curr->next` to `prev`, then advance `prev` and `curr`. When the loop ends, `prev` will point to the new head.
+
+Complexity  
+Time complexity: $$O(n)$$  
+Space complexity: $$O(1)$$  

@@ -1,0 +1,9 @@
+Intuition  
+We want to find all root-to-leaf paths where the sum of node values equals the target. A recursive DFS works well to track the current path and its cumulative sum.
+
+Approach  
+Use DFS to explore each path. Maintain a running sum and a list of visited nodes (`path`). When a leaf is reached, check if the total sum matches the target. If it does, store the path. Backtrack after visiting each child by popping the last node from `path`.
+
+Complexity  
+Time complexity: $$O(n)$$, every node is visited once  
+Space complexity: $$O(h)$$ for recursion stack (where \( h \) is the height of the tree) + path storage for valid paths  

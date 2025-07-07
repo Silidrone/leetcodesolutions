@@ -48,6 +48,12 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "charconv": "cpp",
+        "ctime": "cpp",
+        "optional": "cpp",
+        "format": "cpp",
+        "text_encoding": "cpp",
+        "variant": "cpp"
     }
 }

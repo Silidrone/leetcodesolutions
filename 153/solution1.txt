@@ -1,0 +1,9 @@
+Intuition  
+To find the minimum element in a rotated sorted array, we can locate the pivot point: the point where the order breaks. The minimum is either at the start or at the pivot index.
+
+Approach  
+Use modified binary search to find the pivot, which is the index where the array drops (nums[i] > nums[i+1]). If no pivot is found, the array is not rotated and the first element is the minimum. Otherwise, return the smaller of nums[0] and nums[pivot].
+
+Complexity  
+Time complexity: $$O(\log n)$$  
+Space complexity: $$O(\log n)$$ due to recursion (can be $$O(1)$$ if converted to iterative)  

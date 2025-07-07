@@ -1,0 +1,9 @@
+Intuition  
+To generate all permutations of a list of numbers, we can recursively fix one number at a time and permute the rest. Using a deque allows easy rotation by popping from the front and pushing to the back.
+
+Approach  
+Use recursion. For each position, pop the front element and generate permutations of the remaining elements. Append the popped number to each of those permutations and store the result. Restore the original order by pushing the number back at the end of the loop.
+
+Complexity  
+Time complexity: $$O(n \cdot n!)$$  
+Space complexity: $$O(n!)$$ for the output, plus $$O(n)$$ for the recursion stack

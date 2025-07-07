@@ -1,0 +1,12 @@
+# Intuition
+To reach step n, you must have come from either step n - 1 or step n - 2.  
+So total ways to reach n is: ways(n) = ways(n - 1) + ways(n - 2)
+
+# Approach
+Use top-down recursion with memoization to store already computed subproblems and avoid redundant work.  
+Base case: 0 steps = 1 way (do nothing), negative steps = 0 ways.  
+Memoize results in a hashmap.
+
+# Complexity
+- Time complexity: $$O(n)$$  
+- Space complexity: $$O(n)$$ (due to recursion stack and memo table)

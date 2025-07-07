@@ -1,0 +1,12 @@
+Intuition  
+In a Binary Search Tree (BST), an in-order traversal visits nodes in sorted (ascending) order. So, the k-th node visited during in-order traversal is the k-th smallest element.
+
+Approach  
+Perform in-order traversal using recursion and maintain a count of visited nodes. Once the count reaches k, store the current node's value as the result and stop further traversal.
+
+Complexity  
+Time complexity: $$O(k)$$ in the best case (early return), but $$O(n)$$ in the worst case  
+Space complexity:  
+- Recursive stack: $$O(h)$$, where \( h \) is the tree height  
+- Best case: $$O(\log n)$$ for balanced BST  
+- Worst case: $$O(n)$$ for skewed BST  

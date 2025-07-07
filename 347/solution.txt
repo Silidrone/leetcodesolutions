@@ -1,0 +1,9 @@
+Intuition  
+We want to find the k most frequent elements in the array. Using a frequency map and a min-heap allows us to efficiently track the top k elements based on their frequency.
+
+Approach  
+Count the frequency of each number using a hash map. Then use a min-heap (priority queue) of size k to keep track of the k most frequent elements. If a new element has a higher frequency than the heap's top, replace it. At the end, extract elements from the heap to get the result.
+
+Complexity  
+Time complexity: $$O(n \log k)$$  
+Space complexity: $$O(n + k)$$  
