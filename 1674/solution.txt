@@ -1,0 +1,17 @@
+# Intuition
+For each pair, compute the cost to make their sum equal to any value from 2 to 2*limit. Use a difference array to efficiently track the total cost across all possible sums.
+
+# Approach
+Use a difference array d[] to apply range updates:
+
+Assume cost 2 for all sums.
+
+Subtract 1 in the range [min+1, max+limit] (1-move zone).
+
+Subtract 1 at a + b (0-move zone).
+
+Then compute prefix sum over d[] to find the minimum total moves.
+
+# Complexity
+- Time: $$O(n + limit)$$
+- Space: $$O(limit)$$

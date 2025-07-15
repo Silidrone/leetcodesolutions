@@ -1,0 +1,12 @@
+# Intuition
+We want to track how many events are occurring simultaneously at any given time, and return the maximum number of concurrent bookings after each new booking. The key insight is to use a sweep-line technique: treat each start time as +1 and each end time as -1, and track the running total as we move through time.
+
+# Approach
+We use a std::map<int, int> to store changes in event count: increment the value at startTime, and decrement at endTime. This way, when we iterate through the map in order of time, we simulate the timeline of events, incrementing the active booking count at starts and decrementing it at ends. The maximum value of the running count at any point gives the peak overlap (i.e., the max number of concurrent events).
+
+# Complexity
+Time complexity: $$O(nlogn)$$ (excluding `n` calls to `book`)
+Each `book()` call inserts two keys into the map and iterates through up to 2n keys. Insertion is $$O(log n)$$, and the full scan is $$O(n)$$ in the worst case.
+
+Space complexity: $$O(n)$$
+The map stores up to 2n entries (each booking contributes a start and end point).
