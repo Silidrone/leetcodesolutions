@@ -1,3 +1,5 @@
+#include <vector>
+
 class Solution {
 public:
     using Grid = std::vector<std::vector<int>>;
